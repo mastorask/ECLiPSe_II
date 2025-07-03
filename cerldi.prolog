@@ -14,12 +14,13 @@
 :-['src/stream.prolog'].
 
 
-:-dynamic t_entity/3, max_level/1, event/2, state/2, transformed_definition_conditions/3.
+:-dynamic t_entity/3, max_level/1, event/2, state/2, transformed_definition_conditions/3, definition_conditions/2.
 
 % main loop
 er(StreamFile, OutputFile, DefinitionsFile, Window, Step):-
     open(StreamFile, read, SF, [alias(inputstream)]),
     open(OutputFile, write, OF,[alias(resultsfile)]),
+    % compile(DefinitionsFile),
     consult(DefinitionsFile),
     preprocess_definitions,
     CurrentTime is Step,
