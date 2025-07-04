@@ -20,7 +20,8 @@
 er(StreamFile, OutputFile, DefinitionsFile, Window, Step):-
     open(StreamFile, read, SF, [alias(inputstream)]),
     open(OutputFile, write, OF,[alias(resultsfile)]),
-    % compile(DefinitionsFile),
+    write('Writing to resultsfile: '), write(OF), nl, % Debug
+    compile(DefinitionsFile),
     consult(DefinitionsFile),
     preprocess_definitions,
     CurrentTime is Step,
@@ -30,11 +31,11 @@ er(StreamFile, OutputFile, DefinitionsFile, Window, Step):-
 
 er_loop(Tq, Window, Step):-
     assert_events(inputstream, Tq, EndOfFile),
-    write("Query at T= "), writeln(Tq),
+    % write("Query at T= "), writeln(Tq), % for debugging
     temporal_query,
-    % IMPLEMENT print to output
-    findall(_,(t_entity(X, event, user), event(X,T), writeln(event(X,T))), _),
-    findall(_,(t_entity(X, state, user), state(X,T), writeln(state(X,T))), _),
+    % Write to resultsfile instead of console
+    findall(_,(t_entity(X, event, user), event(X,T), writeln(resultsfile, event(X,T))), _),
+    findall(_,(t_entity(X, state, user), state(X,T), writeln(resultsfile, state(X,T))), _),
     continue_er_loop(EndOfFile, Tq, Window, Step).
 
 continue_er_loop(yes, _, _, _).
@@ -45,41 +46,45 @@ continue_er_loop(no, Tq, Window, Step):-
     forget_output_entities,
     er_loop(Tq1, Window, Step).
 
-
 % performs a temporal query at instant Tq, over stream with Alias
 temporal_query:-
+    write('Starting temporal_query'), nl,
     findall(_,
         (
             max_level(MaxLevel),
+            write('MaxLevel: '), write(MaxLevel), nl,
             all_between(1, MaxLevel, Levels),
             member(Level, Levels),
+            write('Processing Level: '), write(Level), nl,
             t_entity(X, _, user),
             level(X, Level),
+            write('Processing entity: '), write(X), nl,
             process_entity(X)
         ),_).
 
-
 % processes the entity X
 process_entity(X):-
-    % we need to make sure that it is a user defined entity of type event
     t_entity(X, event, user),!,
-    % we get the transformed conditions YTr, and the variable C corresponding
-    % to the instant at which the definition is true
+    % write('Processing event: '), write(X), nl,
     transformed_definition_conditions(X, YTr, C),
-    findall(_,
-            (
-                YTr, % we execute the transformed conditions
-                assert_if_not_exists(event(X,C)) % we assert the result
-            ),_).
-
-process_entity(X):-
-    % same as above but for states
-    t_entity(X, state, user),!,
-    transformed_definition_conditions(X, YTr, C),
+    write('Transformed conditions: '), write(YTr), nl,
     findall(_,
             (
                 YTr,
-                assert_if_not_exists(state(X,C))
+                assert_if_not_exists(event(X,C)),
+                write('Asserted event: '), write(event(X,C)), nl
+            ),_).
+
+process_entity(X):-
+    t_entity(X, state, user),!,
+    % write('Processing state: '), write(X), nl,
+    transformed_definition_conditions(X, YTr, C),
+    write('Transformed conditions: '), write(YTr), nl,
+    findall(_,
+            (
+                YTr,
+                assert_if_not_exists(state(X,C)),
+                write('Asserted state: '), write(state(X,C)), nl
             ),_).
 
 forget_output_entities:-   

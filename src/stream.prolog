@@ -5,9 +5,11 @@
 assert_events(Alias, T, EndOfFile):-
     % get_stream(IFd, Alias),
     % get_stream_info(IFd, position, Position),
+    write('assert_events called with Alias: '), write(Alias), write(' at T: '), write(T), nl,
     stream_property(IFd, alias(Alias)),
     stream_property(IFd, position(Position)),
     read_string(IFd, "\n", "\r", Sep, String), 
+    write('Read string: '), write(String), nl,
     assert_events2(IFd, T, Sep, Position, String, EndOfFile).
 
 assert_events2(_IFd, _T, -1, _Position, _String, yes).
