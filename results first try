@@ -1,0 +1,859 @@
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+state(drinking_period,[3,10])
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+event(picks_and_drops,5)
+state(powered_on,[16,20])
+state(drinking_period,[3,10])
+state(powered_on,[16,20])
+state(drinking_period,[3,10])
+state(powered_on,[16,20])
+state(drinking_period,[3,10])
+
+
+?- ['samples/beers/load.prolog'].
+Starting preprocess_definitions
+Asserting max_level: 1
+Starting transform_definitions
+Transforming: picks_and_drops := picks and drops
+Transforming event: picks_and_drops
+Base case for instant: picks at T: _3620
+Base case for instant: drops at T: _3620
+Transformed to: event(picks,_3620),event(drops,_3620) with C: _3620
+Transforming: powered_on := turns_on~>turns_off
+Transforming state: powered_on
+Base case for instant: turns_on at T: _3716
+Base case for instant: turns_off at T: _3722
+Transformed to: event(turns_on,_3716),event(turns_off,_3722),_3716<_3722,maximal_intervals([_3716],[_3722],_3778),member([_3716,_3722],_3778) with C: [_3716,_3722]
+Transforming: drinking_period := drinks~>leaves
+Transforming state: drinking_period
+Base case for instant: drinks at T: _3716
+Base case for instant: leaves at T: _3722
+Transformed to: event(drinks,_3716),event(leaves,_3722),_3716<_3722,maximal_intervals([_3716],[_3722],_3778),member([_3716,_3722],_3778) with C: [_3716,_3722]
+true.
+
+
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+MaxLevel: 1
+Processing Level: 1
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_12284),event(drops,_12284) with C: _12284
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Transformed conditions for state: event(turns_on,_12296),event(turns_off,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Condition failed for state: powered_on
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_12296),event(leaves,_12308),_12296<_12308,maximal_intervals([_12296],[_12308],_12334),member([_12296,_12308],_12334) with C: [_12296,_12308]
+Asserted state: state(drinking_period,[3,10])
+assert_events called with Alias: inputstream at T: 20
+Read string: event(turns_off,20).
+Starting temporal_query
+MaxLevel: 1
+Processing Level: 1
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+MaxLevel: 1
+Processing Level: 1
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: picks_and_drops
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Transformed conditions for event: event(picks,_13988),event(drops,_13988) with C: _13988
+Asserted event: event(picks_and_drops,5)
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: powered_on
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Transformed conditions for state: event(turns_on,_14000),event(turns_off,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(powered_on,[16,20])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Processing entity: drinking_period
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+Transformed conditions for state: event(drinks,_14000),event(leaves,_14012),_14000<_14012,maximal_intervals([_14000],[_14012],_14038),member([_14000,_14012],_14038) with C: [_14000,_14012]
+Asserted state: state(drinking_period,[3,10])
+true 

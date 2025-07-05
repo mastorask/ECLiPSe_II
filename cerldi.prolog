@@ -13,14 +13,13 @@
 % read from file, assert and retract events
 :-['src/stream.prolog'].
 
-
 :-dynamic t_entity/3, max_level/1, event/2, state/2, transformed_definition_conditions/3, definition_conditions/2.
 
 % main loop
 er(StreamFile, OutputFile, DefinitionsFile, Window, Step):-
     open(StreamFile, read, SF, [alias(inputstream)]),
     open(OutputFile, write, OF,[alias(resultsfile)]),
-    write('Writing to resultsfile: '), write(OF), nl, % Debug
+    write('Writing to resultsfile: '), write(OF), nl,
     compile(DefinitionsFile),
     consult(DefinitionsFile),
     preprocess_definitions,
@@ -31,9 +30,7 @@ er(StreamFile, OutputFile, DefinitionsFile, Window, Step):-
 
 er_loop(Tq, Window, Step):-
     assert_events(inputstream, Tq, EndOfFile),
-    % write("Query at T= "), writeln(Tq), % for debugging
     temporal_query,
-    % Write to resultsfile instead of console
     findall(_,(t_entity(X, event, user), event(X,T), writeln(resultsfile, event(X,T))), _),
     findall(_,(t_entity(X, state, user), state(X,T), writeln(resultsfile, state(X,T))), _),
     continue_er_loop(EndOfFile, Tq, Window, Step).
@@ -65,27 +62,23 @@ temporal_query:-
 % processes the entity X
 process_entity(X):-
     t_entity(X, event, user),!,
-    % write('Processing event: '), write(X), nl,
     transformed_definition_conditions(X, YTr, C),
-    write('Transformed conditions: '), write(YTr), nl,
-    findall(_,
-            (
-                YTr,
-                assert_if_not_exists(event(X,C)),
-                write('Asserted event: '), write(event(X,C)), nl
-            ),_).
+    write('Transformed conditions for event: '), write(YTr), write(' with C: '), write(C), nl,
+    (   YTr -> 
+            assert_if_not_exists(event(X,C)),
+            write('Asserted event: '), write(event(X,C)), nl
+    ;   write('Condition failed for event: '), write(X), nl
+    ).
 
 process_entity(X):-
     t_entity(X, state, user),!,
-    % write('Processing state: '), write(X), nl,
     transformed_definition_conditions(X, YTr, C),
-    write('Transformed conditions: '), write(YTr), nl,
-    findall(_,
-            (
-                YTr,
-                assert_if_not_exists(state(X,C)),
-                write('Asserted state: '), write(state(X,C)), nl
-            ),_).
+    write('Transformed conditions for state: '), write(YTr), write(' with C: '), write(C), nl,
+    (   YTr -> 
+            assert_if_not_exists(state(X,C)),
+            write('Asserted state: '), write(state(X,C)), nl
+    ;   write('Condition failed for state: '), write(X), nl
+    ).
 
 forget_output_entities:-   
     findall(_,(t_entity(X,event,user), retractall(event(X,T))),_),
